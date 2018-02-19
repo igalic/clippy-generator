@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clippy Generator!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/smore-inc/clippy.js/master/build/clippy.css" media="all">
+  </head>
+  <body>
+    
+  </body>
+<!-- jQuery 1.7+ -->
+<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+<!-- Clippy.js -->
+<script src="https://rawgit.com/smore-inc/clippy.js/master/build/clippy.min.js"></script>
+
+<!-- Init script -->
+<script type="text/javascript">
+    clippy.load('Clippy', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+      setTimeout(() => { 
+        agent.speak('Hmm…');
+        setTimeout(() => {
+          agent.speak("It appears you're trying to write a distributed system.");
+          setTimeout(() => {
+            agent.speak("Have you read `Time, Clocks, and the Ordering of Events in a Distributed System` yet?");
+            setTimeout(() => {
+              agent.play('GestureLeft');
+            }, 3000);
+          }, 2000);
+        }, 2000);
+    }, 1000);
+    });
+</script>
+</html>
